@@ -6,8 +6,9 @@ class HistoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Riwayat Kehadiran Mahasiswa'),
-      ),
+        title: Text('Riwayat Kehadiran Mahasiswa',
+        style: TextStyle(color: Colors.blue),
+      )),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(

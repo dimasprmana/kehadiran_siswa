@@ -8,37 +8,35 @@ class AttendanceScreen extends StatefulWidget {
 
 class _AttendanceScreenState extends State<AttendanceScreen> {
   Map<String, bool> students = {
-    'DIMAS PERMANA': false,
-    'DHAFA FIRJATULLAH H.': false,
-    'ISHAK HADI P.': false,
-    'GILANG BAGUS TRI PAMBUDI': false,
-    'M.DZAKY M.': false,
+    'Dimas Permana': false,
+    'Dhafa Fijatullah H.': false,
+    'Ishak Hadi P.': false,
+    'Gilang Bagus Tripambudi': false,
+    'M.Dzaky M.': false,
   };
 
   void _saveData(BuildContext context) {
     int hadir = students.values.where((isPresent) => isPresent).length;
     int tidakHadir = students.values.where((isPresent) => !isPresent).length;
 
-    
     attendanceHistory.add({
       'date': DateTime.now().toLocal().toString().split(' ')[0],
-      'details': Map<String, bool>.from(students), 
+      'details': Map<String, bool>.from(students),
       'summary': 'Hadir: $hadir, Tidak Hadir: $tidakHadir',
     });
 
-  
     setState(() {
       students.updateAll((key, value) => false);
     });
-
-
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Presensi Mahasiswa'),
+        title: Text('Presensi Mahasiswa',
+        style:TextStyle(color: Colors.blue),
+      )
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
