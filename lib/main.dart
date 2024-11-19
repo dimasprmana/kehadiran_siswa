@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'screens/attendance_screen.dart';
-import 'screens/history_screen.dart';
+import 'screens/pencacatan_screen.dart';
+import 'screens/riwayat_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,8 +27,8 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
   final List<Widget> _screens = [
-    AttendanceScreen(),
-    HistoryScreen(),
+    CacatanScreen(),
+    RiwayatScreen(),
   ];
 
   void _onTabTapped(int index) {
@@ -43,17 +43,19 @@ class _MainScreenState extends State<MainScreen> {
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
+        selectedItemColor: Colors.blue,
         onTap: _onTabTapped,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.edit),
-            label: 'Pencatatan',
+            icon: Icon(Icons.person),
+            label: 'Mahasiswa',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
             label: 'Riwayat',
           ),
         ],
+        
       ),
     );
   }

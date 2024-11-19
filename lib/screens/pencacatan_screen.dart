@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
 
-class AttendanceScreen extends StatefulWidget {
+class CacatanScreen extends StatefulWidget {
   @override
-  _AttendanceScreenState createState() => _AttendanceScreenState();
+  _CacatanScreenState createState() => _CacatanScreenState();
 }
 
-class _AttendanceScreenState extends State<AttendanceScreen> {
+class _CacatanScreenState extends State<CacatanScreen> {
   Map<String, bool> students = {
     'Dimas Permana': false,
     'Dhafa Fijatullah H.': false,
@@ -57,10 +57,10 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                 }).toList(),
               ),
             ),
-            ElevatedButton(
-              onPressed: () => _saveData(context),
-              child: Text('Simpan'),
-            ),
+              ElevatedButton(
+                onPressed: () => _saveData(context),
+                child: Text('Simpan'),
+              ),
           ],
         ),
       ),

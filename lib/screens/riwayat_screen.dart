@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
 
-class HistoryScreen extends StatelessWidget {
+class RiwayatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
